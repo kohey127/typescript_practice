@@ -77,10 +77,10 @@ enum Role {
 Role.Editor; // 2
 
 // ジェネリクス
-function genericsTest<T>(type: T) :T {
-  return type;
-}
-genericsTest<string>('ああ')
+// function genericsTest<T>(type: T) :T {
+//   return type;
+// }
+// genericsTest<string>('ああ')
 
 function genericsTest<T, K>(type: T, key: K) :string {
   return '${type} + ${key}'
