@@ -15,16 +15,22 @@ const App: React.FC = () => {
     //     setCount(count - 1)
     // }
 
-    const [ message, setMessage ] = useState<string>('')
+    // const [ message, setMessage ] = useState<string>('')
 
-    const handleMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setMessage(e.target.value)
-    }
+    // const handleMessage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setMessage(e.target.value)
+    // }
+
+    const [ blue, setBlue ] = useState(false)
     
     return (
         <div className="App">
-            <p className="title" >{ message }</p>
-            <input type="text" value={message} onChange={handleMessage} />
+            <p className={`
+                title
+                ${ blue ? 'is-blue' : '' }
+            `}
+            onClick={() => setBlue(!blue)}
+            >React スタイル設定</p>
         </div>
     );
 }
